@@ -3,11 +3,11 @@ import urllib.request
 from bs4 import BeautifulSoup
 import ftplib
 
-### OPEN LOCAL FILE
+### OPEN LOCAL FILE ### Se ISBN_List_from_File.py in repository
 #f = open('example_solr_export.csv', 'r', encoding='utf-8')
 #csv_f = csv.reader(f)
 
-url = 'http://sandbox.lbcc.linnlibraries.org/example_solr_export.csv'
+url = 'PUT_URL_HERE.URL'
 #response = urllib.request.urlopen(url)
 #cr = csv.reader(response)
 response = urllib.request.urlopen(url)
@@ -59,7 +59,7 @@ for i in range(len(data)):
 
 #print (splitISBN)
 
-with open('ISBN_List.csv','w') as fp:
+with open('NAME_CSV_FILE.csv','w') as fp:
     a = csv.writer(fp,delimiter=',', lineterminator='\n')
     data = testISBN
     a.writerows(data)
