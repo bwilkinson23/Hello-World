@@ -2,7 +2,7 @@ import csv
 
 
 ### OPEN LOCAL FILE
-f = open('example_solr_export.csv', 'r', encoding='utf-8')
+f = open('CSV_FILE_NAME.csv', 'r', encoding='utf-8')
 csv_f = csv.reader(f)
 
 #print (f)  ##_io.Text location
@@ -55,7 +55,7 @@ for i in range(len(data)):
 
 #print (splitISBN)
 
-with open('ISBNlist.csv','w') as fp:
+with open('NAME_NEW_CSV_FILE.csv','w') as fp:
     a = csv.writer(fp,delimiter=',', lineterminator='\n')
     data = testISBN
     a.writerows(data)
